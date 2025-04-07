@@ -1,0 +1,24 @@
+{
+    "name": "imu.rs dev",
+    "dockerComposeFile": "../docker/docker-compose.yaml",
+    "initializeCommand": "docker/setup-env.sh",
+    "service": "imu-dev",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "rust-analyzer.checkOnSave.command": "clippy",
+                "editor.formatOnSave": true,
+                "rust-analyzer.cargo.allFeatures": true,
+                "rust-analyzer.procMacro.enable": true,
+                "rust-analyzer.checkOnSave.allFeatures": true
+            },
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "tamasfe.even-better-toml",
+                "vadimcn.vscode-lldb"
+            ]
+        }
+    },
+    "workspaceFolder": "/home/dev/imu.rs/"
+}

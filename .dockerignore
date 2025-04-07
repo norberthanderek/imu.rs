@@ -1,0 +1,25 @@
+# Rust artifacts
+/target/
+**/*.rs.bk
+
+# Git
+.git/
+.gitignore
+
+# Docker
+docker/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+tmp/
+temp/
