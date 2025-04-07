@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "publisher",
+    "consumer",
+    "common"
+]
