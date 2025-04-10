@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     git \
     neovim \
+    protobuf-compiler \
+    libprotobuf-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /etc/sudoers.d \

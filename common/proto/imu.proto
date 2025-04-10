@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package imu;
+
+message IMUData {
+  float x_acc = 1; // Acceleration [mg, g=9.81]
+  float y_acc = 2; // Acceleration [mg, g=9.81]
+  float z_acc = 3; // Acceleration [mg, g=9.81]
+  uint32 timestamp_acc = 4;
+
+  int32 x_gyro = 5; // Gyro rate of rotation [mDeg/s]
+  int32 y_gyro = 6; // Gyro rate of rotation [mDeg/s]
+  int32 z_gyro = 7; // Gyro rate of rotation [mDeg/s]
+  uint32 timestamp_gyro = 8;
+
+  float x_mag = 9;  // Magnetic induction [mGauss]
+  float y_mag = 10; // Magnetic induction [mGauss]
+  float z_mag = 11; // Magnetic induction [mGauss]
+  uint32 timestamp_mag = 12;
+}
