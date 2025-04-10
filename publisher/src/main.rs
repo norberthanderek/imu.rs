@@ -1,4 +1,5 @@
 mod cli;
+mod imu_emulator;
 
 fn main() {
     let args = cli::PublisherArgs::parse();
