@@ -1,6 +1,3 @@
 [workspace]
-members = [
-    "publisher",
-    "consumer",
-    "common"
-]
+members = ["publisher", "consumer", "common"]
+resolver = "3"

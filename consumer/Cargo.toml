@@ -2,5 +2,7 @@
 name = "consumer"
 version = "0.1.0"
 edition = "2024"
+authors = ["Norbert Hańderek <norbert.handerek03@gmail.com>"]
 
 [dependencies]
+common = { path = "../common" }
