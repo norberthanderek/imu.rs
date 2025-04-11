@@ -14,7 +14,6 @@ const MAG_NOISE_STD_DEV: f32 = 5.0; // mGauss
 // Low-pass filter coefficient for sensor data smoothing
 const ALPHA: f32 = 0.7; // 0 < ALPHA < 1, higher = more filtering
 
-#[allow(dead_code)]
 pub struct ImuEmulator {
     data: ImuData,
     next_target_change: SystemTime,
@@ -27,7 +26,6 @@ pub struct ImuEmulator {
     mag_noise: Normal<f32>,
 }
 
-#[allow(dead_code)]
 impl ImuEmulator {
     pub fn new() -> Self {
         ImuEmulator {
@@ -44,7 +42,7 @@ impl ImuEmulator {
         }
     }
 
-    pub fn generate_data(&mut self) -> &ImuData {
+    pub fn generate_data(&mut self) -> ImuData {
         let now = SystemTime::now();
 
         if now >= self.next_target_change {
@@ -57,7 +55,7 @@ impl ImuEmulator {
         self.update_gyroscope(now);
         self.update_magnetometer(now);
 
-        &self.data
+        self.data
     }
 
     fn update_targets(&mut self) {
