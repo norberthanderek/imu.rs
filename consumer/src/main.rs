@@ -1,4 +1,5 @@
 mod cli;
+mod motion;
 
 fn main() {
     let args = cli::ConsumerArgs::parse();

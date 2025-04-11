@@ -6,3 +6,6 @@ authors = ["Norbert Hańderek <norbert.handerek03@gmail.com>"]
 
 [dependencies]
 common = { path = "../common" }
+tokio = { version = "1.44.2", features = ["full"] }
+nalgebra = "0.33.2"
+approx = "0.5.1"
