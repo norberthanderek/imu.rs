@@ -11,9 +11,21 @@ both installed via [rustup](https://www.rust-lang.org/tools/install)
 apt update && apt install -y protobuf-compiler libprotobuf-dev
 ```
 
-## Build & run
+## Build
 ```sh
-cargo build
+cargo build --release
+```
+
+## Run
+```sh
+./target/release/publisher # --help
+# on separate shell
+./target/release/consumer # --help
+```
+
+## Test
+```sh
+cargo test
 ```
 
 ## Docker
